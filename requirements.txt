@@ -1,0 +1,4 @@
+pandas
+pyarrow
+apache-airflow-providers-apache-kafka
+confluent-kafka

@@ -1,0 +1,19 @@
+{"timestamp":"2026-04-05T18:46:07.304013","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-04-05T18:46:07.307507","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/streaming_dags.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-04-05T18:46:07.988356Z","level":"error","event":"%3|1775414767.497|FAIL|rdkafka#producer-1| [thrd:broker:2909/bootstrap]: broker:2909/bootstrap: Connect to ipv4#172.21.0.5:2909 failed: Connection refused (after 5ms in state CONNECT)","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.988715Z","level":"error","event":"%4|1775414767.773|TERMINATE|rdkafka#producer-1| [thrd:app]: Producer terminating with 1 message (421 bytes) still in queue or transit: use flush() to wait for outstanding message delivery","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.989002Z","level":"error","event":"%3|1775414767.774|FAIL|rdkafka#producer-1| [thrd:broker:2909/bootstrap]: broker:2909/bootstrap: Connect to ipv4#172.21.0.5:2909 failed: Connection refused (after 0ms in state CONNECT, 1 identical error(s) suppressed)","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.989587Z","level":"info","event":"{","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.989727Z","level":"info","event":"   \"first_name\": \"Aleksa\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.989838Z","level":"info","event":"   \"last_name\": \"Sokolovi\\u0107\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.989941Z","level":"info","event":"   \"gender\": \"female\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.990073Z","level":"info","event":"   \"address\": \"1339 Danila Vladisavl\\u0408evi\\u0107a  Medve\\u0111a Prizren Serbia\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.990168Z","level":"info","event":"   \"postcode\": 34261,","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.990265Z","level":"info","event":"   \"email\": \"aleksa.sokolovic@example.com\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.990410Z","level":"info","event":"   \"username\": \"purplerabbit374\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.990578Z","level":"info","event":"   \"dob\": \"2000-08-09T01:24:48.886Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.990769Z","level":"info","event":"   \"registered_date\": \"2011-01-23T07:34:34.907Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.991038Z","level":"info","event":"   \"phone\": \"036-1823-848\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.991199Z","level":"info","event":"   \"picture\": \"https://randomuser.me/api/portraits/med/women/67.jpg\"","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.991353Z","level":"info","event":"}","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:46:07.775657","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

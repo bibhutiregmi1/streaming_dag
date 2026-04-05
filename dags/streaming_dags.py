@@ -1,18 +1,18 @@
 from datetime import datetime
 import json, requests
 from airflow.sdk import dag,task
+from confluent_kafka import Producer
 
 
 @dag(start_date=datetime(2025, 1, 1), schedule="@daily")
 def streaming_dag():
-    @task
+
     def get_data():
         res = requests.get('http://randomuser.me/api/')
         res = res.json()
         res = res['results'][0]
         return res
 
-    @task
     def format_data(res):
         data = {}
         location = res['location']
@@ -32,9 +32,23 @@ def streaming_dag():
 
     @task
     def stream_data():
+        # Configuration
+        conf = {'bootstrap.servers': "broker:2909"}
+
+        # Create Producer instance
+        p = Producer(conf)
+
+        def delivery_report(err, msg):
+            if err is not None:
+                print(f"Message delivery failed: {err}")
+            else:
+                print(f"Message delivered to {msg.topic()} [{msg.partition()}]")
+
+        # Produce data
         res = get_data()
         res = format_data(res)
+        p.produce('users_created', key="user1", value=json.dumps(res).encode('utf-8'), callback=delivery_report)
         print(json.dumps(res, indent=3))
 
-    get_data()>>format_data()>>stream_data()
+    stream_data()
 streaming_dag()
