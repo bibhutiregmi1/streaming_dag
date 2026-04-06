@@ -26,11 +26,24 @@ def format_data(res):
 
 
 def stream_data():
-    from kafka import KafkaProducer
+    from confluent_kafka import Producer
+    conf = {'bootstrap.servers': "localhost:9092"}
+
+    # Create Producer instance
+    p = Producer(conf)
+
+    def delivery_report(err, msg):
+        if err is not None:
+            print(f"Message delivery failed: {err}")
+        else:
+            print(f"Message delivered to {msg.topic()} [{msg.partition()}]")
+
+    # Produce data
     res = get_data()
     res = format_data(res)
+    p.produce('my_topic', key='test_key', value='hello world', callback=delivery_report)
+    # p.produce('users_created', key="user1", value=json.dumps(res).encode('utf-8'), callback=delivery_report)
     print(json.dumps(res, indent=3))
-    producer = KafkaProducer(bootstrap_servers=['localhost:9092'], max_block_ms=5000)
-    producer.send('users_created', json.dumps(res).encode('utf-8'))
+    p.flush(10)
 
 stream_data()

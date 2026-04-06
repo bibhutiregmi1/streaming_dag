@@ -1,0 +1,18 @@
+{"timestamp":"2026-04-05T19:20:52.268989","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-04-05T19:20:52.271077","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/streaming_dags.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-04-05T19:20:52.608315Z","level":"error","event":"%4|1775416852.473|CONFWARN|rdkafka#producer-1| [thrd:app]: Configuration property auto.offset.reset is a consumer property and will be ignored by this producer instance","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.968601Z","level":"info","event":"{","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.969268Z","level":"info","event":"   \"first_name\": \"Francisco Javier\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.969406Z","level":"info","event":"   \"last_name\": \"Meraz\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.969524Z","level":"info","event":"   \"gender\": \"male\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.969649Z","level":"info","event":"   \"address\": \"8916 Eje vial Tamaulipas Rinc\\u00f3n Ju\\u00e1rez Tamaulipas Mexico\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.969780Z","level":"info","event":"   \"postcode\": 77106,","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.969878Z","level":"info","event":"   \"email\": \"franciscojavier.meraz@example.com\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.969969Z","level":"info","event":"   \"username\": \"redpanda952\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.970085Z","level":"info","event":"   \"dob\": \"1976-06-30T00:13:59.519Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.970182Z","level":"info","event":"   \"registered_date\": \"2007-01-19T09:42:42.846Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.970280Z","level":"info","event":"   \"phone\": \"(672) 005 4310\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.970384Z","level":"info","event":"   \"picture\": \"https://randomuser.me/api/portraits/med/men/65.jpg\"","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.970515Z","level":"info","event":"}","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.990624Z","level":"info","event":"Message delivered to users_created31 [0]","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:20:52.996067","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

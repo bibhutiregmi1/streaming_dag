@@ -1,0 +1,17 @@
+{"timestamp":"2026-04-05T19:04:16.075489","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-04-05T19:04:16.076967","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/streaming_dags.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-04-05T19:04:16.357439Z","level":"info","event":"{","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.357679Z","level":"info","event":"   \"first_name\": \"Frances\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.357788Z","level":"info","event":"   \"last_name\": \"Fekkes\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.357897Z","level":"info","event":"   \"gender\": \"female\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358032Z","level":"info","event":"   \"address\": \"5033 Clara Wichmannlaan Wierden Groningen Netherlands\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358146Z","level":"info","event":"   \"postcode\": \"6026 NS\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358256Z","level":"info","event":"   \"email\": \"frances.fekkes@example.com\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358376Z","level":"info","event":"   \"username\": \"lazyzebra210\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358482Z","level":"info","event":"   \"dob\": \"1988-09-08T18:50:53.581Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358596Z","level":"info","event":"   \"registered_date\": \"2003-07-09T12:48:15.555Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358770Z","level":"info","event":"   \"phone\": \"(0931) 958065\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.358890Z","level":"info","event":"   \"picture\": \"https://randomuser.me/api/portraits/med/women/36.jpg\"","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.359070Z","level":"info","event":"}","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.369277Z","level":"info","event":"Message delivered to users_created [0]","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:04:16.373366","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

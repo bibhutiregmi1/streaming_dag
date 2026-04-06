@@ -1,0 +1,18 @@
+{"timestamp":"2026-04-05T19:22:18.143402","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-04-05T19:22:18.172866","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/streaming_dags.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-04-05T19:22:18.640727Z","level":"error","event":"%4|1775416938.504|CONFWARN|rdkafka#producer-1| [thrd:app]: Configuration property auto.offset.reset is a consumer property and will be ignored by this producer instance","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.909217Z","level":"info","event":"{","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.910511Z","level":"info","event":"   \"first_name\": \"Ece\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.910838Z","level":"info","event":"   \"last_name\": \"Durmaz\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.911188Z","level":"info","event":"   \"gender\": \"female\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.911554Z","level":"info","event":"   \"address\": \"1073 \\u015eehitler Cd Denizli Sinop Turkey\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.911753Z","level":"info","event":"   \"postcode\": 27009,","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.911892Z","level":"info","event":"   \"email\": \"ece.durmaz@example.com\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.911993Z","level":"info","event":"   \"username\": \"whitemeercat533\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.912200Z","level":"info","event":"   \"dob\": \"1972-03-22T16:16:10.923Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.912349Z","level":"info","event":"   \"registered_date\": \"2008-08-10T11:41:03.960Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.912567Z","level":"info","event":"   \"phone\": \"(289)-686-4759\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.912866Z","level":"info","event":"   \"picture\": \"https://randomuser.me/api/portraits/med/women/41.jpg\"","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.913203Z","level":"info","event":"}","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.930661Z","level":"info","event":"Message delivered to users_created31 [0]","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T19:22:18.937467","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}

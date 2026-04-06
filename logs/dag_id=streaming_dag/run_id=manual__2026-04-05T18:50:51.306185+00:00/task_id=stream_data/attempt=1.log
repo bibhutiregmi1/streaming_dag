@@ -1,0 +1,19 @@
+{"timestamp":"2026-04-05T18:51:05.973268","level":"info","event":"DAG bundles loaded: dags-folder","logger":"airflow.dag_processing.bundles.manager.DagBundlesManager"}
+{"timestamp":"2026-04-05T18:51:05.978128","level":"info","event":"Filling up the DagBag from /opt/airflow/dags/streaming_dags.py","logger":"airflow.models.dagbag.DagBag"}
+{"timestamp":"2026-04-05T18:51:06.734997Z","level":"error","event":"%3|1775415066.415|FAIL|rdkafka#producer-1| [thrd:broker:2909/bootstrap]: broker:2909/bootstrap: Connect to ipv4#172.21.0.5:2909 failed: Connection refused (after 17ms in state CONNECT)","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.282131Z","level":"error","event":"%3|1775415067.277|FAIL|rdkafka#producer-1| [thrd:broker:2909/bootstrap]: broker:2909/bootstrap: Connect to ipv4#172.21.0.5:2909 failed: Connection refused (after 1ms in state CONNECT, 1 identical error(s) suppressed)","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.296520Z","level":"error","event":"%4|1775415067.280|TERMINATE|rdkafka#producer-1| [thrd:app]: Producer terminating with 1 message (387 bytes) still in queue or transit: use flush() to wait for outstanding message delivery","chan":"stderr","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.297241Z","level":"info","event":"{","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.298899Z","level":"info","event":"   \"first_name\": \"Pinja\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.299822Z","level":"info","event":"   \"last_name\": \"Elo\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.301254Z","level":"info","event":"   \"gender\": \"female\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.302133Z","level":"info","event":"   \"address\": \"6892 Aleksanterinkatu Nykarleby Central Finland Finland\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.303718Z","level":"info","event":"   \"postcode\": 89486,","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.305416Z","level":"info","event":"   \"email\": \"pinja.elo@example.com\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.307223Z","level":"info","event":"   \"username\": \"crazysnake819\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.308054Z","level":"info","event":"   \"dob\": \"1954-02-25T15:48:16.159Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.308869Z","level":"info","event":"   \"registered_date\": \"2019-11-11T11:25:35.640Z\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.309691Z","level":"info","event":"   \"phone\": \"03-804-858\",","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.310598Z","level":"info","event":"   \"picture\": \"https://randomuser.me/api/portraits/med/women/16.jpg\"","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.311088Z","level":"info","event":"}","chan":"stdout","logger":"task"}
+{"timestamp":"2026-04-05T18:51:07.321716","level":"info","event":"Done. Returned value was: None","logger":"airflow.task.operators.airflow.providers.standard.decorators.python._PythonDecoratedOperator"}
