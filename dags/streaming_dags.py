@@ -34,8 +34,7 @@ def streaming_dag():
     @task
     def stream_data():
         # Configuration
-        conf = {'bootstrap.servers': "broker:29092",
-                'auto.offset.reset': 'earliest'}
+        conf = {'bootstrap.servers': "broker:29092"}
 
         # Create Producer instance
         p = Producer(conf)
@@ -48,21 +47,20 @@ def streaming_dag():
 
         # Produce data
         # p.produce('my_topic1', key='test_key', value='hello world', callback=delivery_report)
-        curr_time = time.time
+        curr_time = time.time()
         while True:
-            if time.time > curr_time + 60:
+            if time.time() > curr_time + 60:
                 break
             try:
                 res = get_data()
                 res = format_data(res)
                 p.produce('users_created31', key="user1", value=json.dumps(res).encode('utf-8'),
                           callback=delivery_report)
+                logging.info(json.dumps(res, indent=3))
+                p.flush(10)
             except Exception as e:
                 logging.error(f"An error occured: {e}")
                 continue
-
-        logging.log(json.dumps(res, indent=3))
-        p.flush(10)
 
     stream_data()
 streaming_dag()

@@ -1,4 +1,10 @@
-import requests, json
+import logging
+from datetime import datetime
+import json, requests, time
+from airflow.sdk import dag,task
+from confluent_kafka import Producer
+
+
 
 def get_data():
     res = requests.get('http://randomuser.me/api/')
@@ -26,7 +32,7 @@ def format_data(res):
 
 
 def stream_data():
-    from confluent_kafka import Producer
+    # Configuration
     conf = {'bootstrap.servers': "localhost:9092"}
 
     # Create Producer instance
@@ -39,11 +45,23 @@ def stream_data():
             print(f"Message delivered to {msg.topic()} [{msg.partition()}]")
 
     # Produce data
-    res = get_data()
-    res = format_data(res)
-    p.produce('my_topic', key='test_key', value='hello world', callback=delivery_report)
-    # p.produce('users_created', key="user1", value=json.dumps(res).encode('utf-8'), callback=delivery_report)
-    print(json.dumps(res, indent=3))
-    p.flush(10)
+    # p.produce('my_topic1', key='test_key', value='hello world', callback=delivery_report)
+    curr_time = time.time()
+    while True:
+        if time.time() > curr_time + 60:
+            break
+        try:
+            res = get_data()
+            res = format_data(res)
+            p.produce('users_created', key="user1", value=json.dumps(res).encode('utf-8'), callback=delivery_report)
+
+            p.flush(10)
+            logging.info(json.dumps(res, indent=3))
+        except Exception as e:
+            logging.error(f"An error occured: {e}")
+            continue
+
+
+    #  print(json.dumps(res, indent=3))
 
 stream_data()

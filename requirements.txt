@@ -1,2 +1,5 @@
 apache-airflow-providers-apache-kafka
 confluent-kafka
+cassandra-driver
+spark
+pyspark
