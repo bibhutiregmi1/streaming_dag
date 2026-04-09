@@ -54,7 +54,7 @@ def streaming_dag():
             try:
                 res = get_data()
                 res = format_data(res)
-                p.produce('users_created31', key="user1", value=json.dumps(res).encode('utf-8'),
+                p.produce('users_created', key="user1", value=json.dumps(res).encode('utf-8'),
                           callback=delivery_report)
                 logging.info(json.dumps(res, indent=3))
                 p.flush(10)

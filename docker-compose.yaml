@@ -386,7 +386,7 @@ services:
         condition: service_completed_successfully
 
   spark-master:
-    image: apache/spark:latest
+    image: apache/spark:3.5.1
     command: /opt/spark/bin/spark-class org.apache.spark.deploy.master.Master
     ports:
       - "9090:8080"
@@ -394,7 +394,7 @@ services:
     networks:
       - confluent
   spark-worker:
-    image: apache/spark:latest
+    image: apache/spark:3.5.1
     command: /opt/spark/bin/spark-class org.apache.spark.deploy.worker.Worker spark://spark-master:7077
     depends_on:
       - spark-master
@@ -406,7 +406,7 @@ services:
     networks:
       - confluent
 
-  cassandra_db:
+  cassandra:
     image: cassandra:latest
     container_name: cassandra
     hostname: cassandra

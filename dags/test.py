@@ -1,9 +1,8 @@
-import logging
+import logging, uuid
 from datetime import datetime
 import json, requests, time
 from airflow.sdk import dag,task
 from confluent_kafka import Producer
-
 
 
 def get_data():
@@ -16,6 +15,7 @@ def get_data():
 def format_data(res):
     data = {}
     location = res['location']
+    data['id'] = str(uuid.uuid4())
     data['first_name'] = res['name']['first']
     data['last_name'] = res['name']['last']
     data['gender'] = res['gender']
@@ -48,7 +48,7 @@ def stream_data():
     # p.produce('my_topic1', key='test_key', value='hello world', callback=delivery_report)
     curr_time = time.time()
     while True:
-        if time.time() > curr_time + 60:
+        if time.time() > curr_time + 20:
             break
         try:
             res = get_data()
